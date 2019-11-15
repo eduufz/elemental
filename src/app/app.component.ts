@@ -20,6 +20,31 @@ export class AppComponent {
       title: 'List',
       url: '/list',
       icon: 'list'
+    },
+    {
+      title: 'Tabla de Clasificaciones',
+      url: '/leaderboards',
+      icon: 'podium'
+    },
+    {
+      title: 'Tienda',
+      url: '/shop',
+      icon: 'cart'
+    },
+    {
+      title: 'Metas',
+      url: '/goals',
+      icon: 'locate'
+    },
+    {
+      title: 'Quiero donar',
+      url: '/donations',
+      icon: 'heart'
+    },
+    {
+      title: 'Fundaciones',
+      url: '/institutions',
+      icon: 'globe'
     }
   ];
 
