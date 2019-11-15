@@ -1,9 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+	<ion-header>
+		<ion-toolbar>
+			<ion-title>ELEMENTAD</ion-title>
+		</ion-toolbar>
+	</ion-header>
 
-<ion-content>
+	<ion-content padding>
 
-</ion-content>
+		<ion-item>
+			<ion-input type="" [(ngModel)]="registerCredentials.username" placeholder="Usuario"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-input type="password" [(ngModel)]="registerCredentials.password" placeholder="Contraseña"></ion-input>
+		</ion-item>
+
+		<ion-button class="ion-activatable" expand="block" size="large"  (click)="signIn()">
+			Continuar
+			<ion-ripple-effect type="unbounded"></ion-ripple-effect>
+		</ion-button>
+	</ion-content>
+</ion-app>
