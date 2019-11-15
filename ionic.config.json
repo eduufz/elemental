@@ -1,5 +1,7 @@
 {
   "name": "elemental",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
