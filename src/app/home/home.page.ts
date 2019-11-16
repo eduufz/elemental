@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class HomePage {
 
   color = 'ion-color-danger';
-  videoElement = '';
+  videoElement = null;
   display = 'show';
   displayVideo = 'hide';
   autoplay = '';
