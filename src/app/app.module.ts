@@ -12,6 +12,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { AuthService } from './auth.service';
 
+import { VideoPlayer } from '@ionic-native/video-player/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [
@@ -26,6 +28,7 @@ import { AuthService } from './auth.service';
   providers: [
     StatusBar,
     SplashScreen,
+    VideoPlayer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AuthService
   ],

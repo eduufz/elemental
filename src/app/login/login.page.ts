@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
-import { NavController, AlertController, LoadingController, Loading, IonicPage } from '@ionic/angular';
+import { NavController, AlertController, LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +9,6 @@ import { NavController, AlertController, LoadingController, Loading, IonicPage }
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-	loading: Loading;
 	isLoading = false;
 	registerCredentials = { username: '', password: '' };
 	constructor(private router: Router, private auth: AuthService, public alertController: AlertController, public loadingController: LoadingController) { }
@@ -41,8 +40,7 @@ export class LoginPage implements OnInit {
 		const loading = await this.loadingController.create({
 			spinner: 'dots',
 			message: 'Espera...',
-			duration: 1000,
-			dismissOnPageChange: true
+			duration: 1000
 		});
 		await loading.present();
 

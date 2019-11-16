@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 export class User {
 	name: string;
-	email: string;
+	username: string;
 
 	constructor(name: string, username: string) {
 		this.name = name;

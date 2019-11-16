@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header class="{{display}}">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -10,35 +10,21 @@
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+  <video width='100%' class="{{displayVideo}}" (ended)="removeAd()" (click)="removeAd()" (loadeddata)='video($event)'>
+    <source src="../assets/videos/ad.mp4" type="video/mp4">
+  </video>
+
+  <div class="top-banner {{display}}">
+    <div class="inner-banner"></div>
+    <div class="badge-banner">
+        <img class="rank-img" [src]="userData.rank.image">
+    </div>
+  </div>
+
+  <ion-button class="ion-activatable custom-size  {{display}} {{color}}" expand="block" size="undefined"  (click)="presentLoading()" color="danger" strong style="font-size: 25px;">
+      <ion-icon name="arrow-dropright-circle" ></ion-icon>
+			  VER ANUNCIO
+			<ion-ripple-effect type="unbounded"></ion-ripple-effect>
+  </ion-button>
+  
 </ion-content>
