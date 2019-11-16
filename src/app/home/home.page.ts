@@ -73,7 +73,7 @@ export class HomePage {
 
 		const { role, data } = await loading.onDidDismiss();
     
-    let transcation_money = parseFloat(Math.random().toFixed(2));
+    let transcation_money = parseFloat((Math.random()*0.5).toFixed(2));
     this.userData.wallet = this.userData.wallet + transcation_money;
     
     this.moneyToast(transcation_money);
