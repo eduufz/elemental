@@ -1,4 +1,4 @@
-<ion-header class="{{display}}">
+<ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -14,14 +14,14 @@
     <source src="../assets/videos/ad.mp4" type="video/mp4">
   </video>
 
-  <div class="top-banner {{display}}">
+  <div class="top-banner">
     <div class="inner-banner"></div>
     <div class="badge-banner">
         <img class="rank-img" [src]="userData.rank.image">
     </div>
   </div>
 
-  <ion-button class="ion-activatable custom-size  {{display}} {{color}}" expand="block" size="undefined"  (click)="presentLoading()" color="danger" strong style="font-size: 25px;">
+  <ion-button class="ion-activatable custom-size" expand="block" size="undefined"  (click)="presentLoading()" color="danger" strong style="font-size: 25px;">
       <ion-icon name="arrow-dropright-circle" ></ion-icon>
 			  VER ANUNCIO
 			<ion-ripple-effect type="unbounded"></ion-ripple-effect>

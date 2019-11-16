@@ -11,11 +11,9 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  color = 'ion-color-danger';
   videoElement = '';
-  display = 'show';
   displayVideo = 'hide';
-  autoplay = '';
+
   currentRank = 16;
   nextRank = this.currentRank + 1;
 
@@ -44,15 +42,14 @@ export class HomePage {
 
     console.log('Loading dismissed!');
     
-    this.display = 'hide';
     this.displayVideo = 'show';
+    this.videoElement.load();
+    this.videoElement.requestFullscreen();
     this.videoElement.play();
   }
   
   removeAd() {
-    this.display = 'show';
     this.displayVideo = 'hide';
-    this.color = 'ion-color-danger'
   }
 
   video(e) {
