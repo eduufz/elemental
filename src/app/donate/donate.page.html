@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Donaciones
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+    <ion-card>
+        <img src="../assets/img/cc.png" style="width:80%; position:relative; margin:0 auto; margin-top: 10px;"/>
+        <ion-card-header>
+          <ion-card-subtitle>Datos bancarios</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+              <ion-list lines="full" class="ion-no-margin ion-no-padding">
+                  <ion-item>
+                      <ion-label position="stacked">Cantidad a donar <ion-text color="danger">*</ion-text></ion-label>
+                      <ion-input required type="text"></ion-input>
+                    </ion-item>
+
+                  <ion-item>
+                    <ion-label position="stacked">Titular <ion-text color="danger">*</ion-text></ion-label>
+                    <ion-input required type="text"></ion-input>
+                  </ion-item>
+        
+                  <ion-item>
+                    <ion-label position="stacked">Número de tarjeta<ion-text color="danger">*</ion-text></ion-label>
+                    <ion-input required type="text"></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                      <ion-label position="stacked">Fecha de caducidad<ion-text color="danger">*</ion-text></ion-label>
+                      <ion-input required type="text"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label position="stacked">Código de seguridad<ion-text color="danger">*</ion-text></ion-label>
+                        <ion-input required type="text"></ion-input>
+                      </ion-item>
+        
+                  <ion-item>
+                    <ion-label position="stacked">Direccón</ion-label>
+                    <ion-input placeholder="Direccón 1"></ion-input>
+                    <ion-input placeholder="Direccón 2"></ion-input>
+                    <ion-input placeholder="Ciudad"></ion-input>
+                    <ion-input placeholder="Estado"></ion-input>
+                    <ion-input placeholder="Código postal"></ion-input>
+                  </ion-item>
+        
+                  <ion-item>
+                    <ion-label position="stacked">Notas</ion-label>
+                    <ion-textarea></ion-textarea>
+                  </ion-item>
+                </ion-list>
+
+              <div padding>
+                  <ion-button (click)="presentLoading()" color="secondary" class="ion-activatable ion-margin-top ion-margin-bottom" expand="block" size="medium">
+                      Confirmar
+                      <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+                    </ion-button>
+                </div>
+        </ion-card-content>
+      </ion-card>
+</ion-content>

@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'institutions',
     loadChildren: () => import('./institutions/institutions.module').then( m => m.InstitutionsPageModule)
   },
+  {
+    path: 'donate',
+    loadChildren: () => import('./donate/donate.module').then( m => m.DonatePageModule)
+  },
 ];
 
 @NgModule({

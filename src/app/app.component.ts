@@ -41,7 +41,7 @@ export class AppComponent {
     },
     {
       title: 'Quiero donar',
-      url: '/donations',
+      url: '/donate',
       icon: 'heart'
     },
     {
