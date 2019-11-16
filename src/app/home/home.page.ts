@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -28,7 +30,7 @@ export class HomePage {
     }
   }
 
-  constructor(public loadingController: LoadingController) {}
+  constructor(public loadingController: LoadingController, private router: Router) {}
 
   async presentLoading() {
 		const loading = await this.loadingController.create({
