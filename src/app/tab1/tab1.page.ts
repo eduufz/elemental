@@ -12,16 +12,16 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-	{ position: 1, name: 'Hydrogen', points: 1.0079, symbol: '1' },
-	{ position: 2, name: 'Helium', points: 4.0026, symbol: '2' },
-	{ position: 3, name: 'Lithium', points: 6.941, symbol: '3' },
-	{ position: 4, name: 'Beryllium', points: 9.0122, symbol: '4' },
-	{ position: 5, name: 'Boron', points: 10.811, symbol: '5' },
-	{ position: 6, name: 'Carbon', points: 12.0107, symbol: '7' },
-	{ position: 7, name: 'Nitrogen', points: 14.0067, symbol: '8' },
-	{ position: 8, name: 'Oxygen', points: 15.9994, symbol: '9' },
-	{ position: 9, name: 'Fluorine', points: 18.9984, symbol: '10' },
-	{ position: 10, name: 'Neon', points: 20.1797, symbol: '13' },
+	{ position: 1, name: 'Hydrogen', points: 10193, symbol: '1' },
+	{ position: 2, name: 'Helium', points: 9137, symbol: '2' },
+	{ position: 3, name: 'Lithium', points: 8890, symbol: '3' },
+	{ position: 4, name: 'Beryllium', points: 8875, symbol: '4' },
+	{ position: 5, name: 'Boron', points: 5859, symbol: '5' },
+	{ position: 6, name: 'Carbon', points: 5100, symbol: '7' },
+	{ position: 7, name: 'Nitrogen', points: 4012, symbol: '8' },
+	{ position: 8, name: 'Oxygen', points: 2988, symbol: '9' },
+	{ position: 9, name: 'Fluorine', points: 2872, symbol: '10' },
+	{ position: 10, name: 'Neon', points: 2019, symbol: '13' },
 ];
 
 
