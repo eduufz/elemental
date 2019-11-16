@@ -13,10 +13,13 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule),
     canActivate: [AuthGuardService]
   },
-
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
+  },
+  {
+    path: 'goals',
+    loadChildren: () => import('./goals/goals.module').then( m => m.GoalsPageModule)
   },
   {
     path: 'leaderboards',
@@ -34,6 +37,14 @@ const routes: Routes = [
   {
     path: 'store',
     loadChildren: () => import('./store/store.module').then( m => m.StorePageModule)
+  },
+  {
+    path: 'institutions',
+    loadChildren: () => import('./institutions/institutions.module').then( m => m.InstitutionsPageModule)
+  },
+  {
+    path: 'donate',
+    loadChildren: () => import('./donate/donate.module').then( m => m.DonatePageModule)
   },
 ];
 

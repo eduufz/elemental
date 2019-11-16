@@ -31,7 +31,7 @@ export class AppComponent {
     },
     {
       title: 'Tienda',
-      url: '/shop',
+      url: '/store',
       icon: 'cart'
     },
     {
@@ -41,7 +41,7 @@ export class AppComponent {
     },
     {
       title: 'Quiero donar',
-      url: '/donations',
+      url: '/donate',
       icon: 'heart'
     },
     {
