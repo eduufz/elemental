@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
   videoElement = '';
   displayVideo = 'hide';
 
@@ -52,9 +51,26 @@ export class HomePage {
   
   removeAd() {
     this.displayVideo = 'hide';
+    document.exitFullscreen();
+
+    this.transaccion();
   }
 
   video(e) {
     this.videoElement = e.srcElement;
+  }
+
+  async transaccion() {
+		const loading = await this.loadingController.create({
+			spinner: 'dots',
+			message: 'Procesando transacción...',
+			duration: 3000
+		});
+		await loading.present();
+
+		const { role, data } = await loading.onDidDismiss();
+    
+    let transcation_money = parseFloat(0.01 + (Math.random() * 0.5).toFixed(2));
+    this.userData.wallet = this.userData.wallet + transcation_money;
   }
 }
