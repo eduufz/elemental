@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'tab2',
     loadChildren: () => import('./tab2/tab2.module').then( m => m.Tab2PageModule)
   },
+  {
+    path: 'institutions',
+    loadChildren: () => import('./institutions/institutions.module').then( m => m.InstitutionsPageModule)
+  },
 ];
 
 @NgModule({
