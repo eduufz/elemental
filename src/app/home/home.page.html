@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-content>
-  <video width='100%' class="{{displayVideo}}" (ended)="removeAd()" (click)="removeAd()" (loadeddata)='video($event)'>
+  <video id="ad" width='100%' class="{{displayVideo}}" (ended)="removeAd()" (click)="removeAd()" (loadeddata)='video($event)'>
     <source src="../assets/videos/ad.mp4" type="video/mp4">
   </video>
 

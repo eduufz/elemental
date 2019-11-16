@@ -8,6 +8,15 @@ const routes: Routes = [
 	path: 'leaderboards',
 	component: LeaderboardsPage,
 	children: [
+		// {
+		// 	path: '',
+		// 	children: [
+		// 	{
+		// 		path: '',
+		// 		loadChildren: '../tab1/tab1.module#Tab1PageModule'
+		// 	}
+		// 	]
+		// },
 	{
 		path: 'tab1',
 		children: [
@@ -25,17 +34,8 @@ const routes: Routes = [
 			loadChildren: '../tab2/tab2.module#Tab2PageModule'
 		}
 		]
-	},
-	{
-		path: '',
-		children: [
-			{
-				path: '',
-				loadChildren: '../tab1/tab1.module#Tab1PageModule',
-			}
-		]
 	}
-	]
+	] 
 },
 	{
 		path: '',
