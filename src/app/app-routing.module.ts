@@ -22,6 +22,19 @@ const routes: Routes = [
     path: 'goals',
     loadChildren: () => import('./goals/goals.module').then( m => m.GoalsPageModule)
   },
+  {
+    path: 'leaderboards',
+    loadChildren: () => import('./leaderboards/leaderboards.module').then( m => m.LeaderboardsPageModule)
+    
+  },
+  {
+    path: 'tab1',
+    loadChildren: () => import('./tab1/tab1.module').then( m => m.Tab1PageModule)
+  },
+  {
+    path: 'tab2',
+    loadChildren: () => import('./tab2/tab2.module').then( m => m.Tab2PageModule)
+  },
 ];
 
 @NgModule({

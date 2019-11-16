@@ -1,0 +1,37 @@
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: #989aa2;
+}
+
+ion-thumbnail{
+	--size: 24px;
+}
+
+tr th {
+	background-color: var(--ion-color-primary);
+	padding: 1em;
+	text-align: left;
+	color: white;
+	border:none;
+}
+tr td {
+	color: #989aa2;
+	border-bottom: none;
+  	transition: height 1s ease-in-out;
+}
+tr:nth-child(even), tr:nth-child(even) td {
+  background-color: #F4F5FA;
+  color: #0bb8cc;
+}
+
+tr:hover td {
+    background-color: #96deda !important;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+

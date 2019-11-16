@@ -11,7 +11,9 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
   transactionThreshold = 50.0
-  videoElement = '';
+  color = 'ion-color-danger';
+  videoElement = null;
+  display = 'show';
   displayVideo = 'hide';
 
   currentRank = Math.floor(Math.random() * 22) + 1 ;
