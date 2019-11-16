@@ -21,6 +21,26 @@
     </div>
   </div>
 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle style='font-size: 20px;'>
+        Cartera
+        <ion-icon name='cash' style='float:right; font-size: 30px;'></ion-icon>
+      </ion-card-subtitle>
+      <ion-card-title color='danger' style='font-size: 35px;'>{{userData.wallet}} €</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle style='font-size: 20px;'>
+        Puntos
+        <ion-icon name='disc' style='float:right; font-size: 30px;'></ion-icon>
+      </ion-card-subtitle>
+      <ion-card-title color='danger' style='font-size: 35px;'>{{userData.points}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
   <ion-button class="ion-activatable custom-size" expand="block" size="undefined"  (click)="presentLoading()" color="danger" strong style="font-size: 25px;">
       <ion-icon name="arrow-dropright-circle" ></ion-icon>
 			  VER ANUNCIO

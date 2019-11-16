@@ -14,7 +14,7 @@ export class HomePage {
   videoElement = '';
   displayVideo = 'hide';
 
-  currentRank = 16;
+  currentRank = Math.floor(Math.random() * 22) + 1 ;
   nextRank = this.currentRank + 1;
 
   userData = {
@@ -25,7 +25,9 @@ export class HomePage {
     "nextRank": {
       "level": this.nextRank,
       "image": `../assets/icon/ranks/rank${this.nextRank}.svg`
-    }
+    },
+    "wallet": 31.24,
+    "points": 591
   }
 
   constructor(public loadingController: LoadingController, private router: Router) {}
