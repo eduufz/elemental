@@ -20,6 +20,7 @@ export class HomePage {
   nextRank = this.currentRank + 1;
 
   userData = {
+    "name":"Elder Bol",
     "rank": {
       "level": this.currentRank,
       "image": `../assets/icon/ranks/rank${this.currentRank}.svg`
