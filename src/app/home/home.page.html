@@ -27,7 +27,15 @@
         Cartera
         <ion-icon name='cash' style='float:right; font-size: 30px;'></ion-icon>
       </ion-card-subtitle>
-      <ion-card-title color='danger' style='font-size: 35px;'>{{userData.wallet}} €</ion-card-title>
+      <ion-card-title>
+        <ion-text color='danger' style='font-size: 35px;'>
+          {{userData.wallet.toFixed(2)}} €
+        </ion-text>
+        <ion-text style='font-size: 35px; color:lightgray;'>
+          / {{transactionThreshold.toFixed(2)}} €
+        </ion-text>
+      </ion-card-title>
+      <ion-progress-bar color="primary" value="{{userData.wallet/transactionThreshold}}"></ion-progress-bar>
     </ion-card-header>
   </ion-card>
 
@@ -37,7 +45,7 @@
         Puntos
         <ion-icon name='disc' style='float:right; font-size: 30px;'></ion-icon>
       </ion-card-subtitle>
-      <ion-card-title color='danger' style='font-size: 35px;'>{{userData.points}}</ion-card-title>
+      <ion-card-title color='danger' style='font-size: 35px;'>{{userData.points.toFixed()}}</ion-card-title>
     </ion-card-header>
   </ion-card>
 

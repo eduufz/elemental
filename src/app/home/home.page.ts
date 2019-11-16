@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController, ToastController } from '@ionic/angular';
 
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  transactionThreshold = 50.0
   videoElement = '';
   displayVideo = 'hide';
 
@@ -29,7 +30,7 @@ export class HomePage {
     "points": 591
   }
 
-  constructor(public loadingController: LoadingController, private router: Router) {}
+  constructor(public loadingController: LoadingController, private router: Router, public toastController: ToastController) {}
 
   async presentLoading() {
 		const loading = await this.loadingController.create({
@@ -70,7 +71,35 @@ export class HomePage {
 
 		const { role, data } = await loading.onDidDismiss();
     
-    let transcation_money = parseFloat(0.01 + (Math.random() * 0.5).toFixed(2));
+    let transcation_money = parseFloat(Math.random().toFixed(2));
     this.userData.wallet = this.userData.wallet + transcation_money;
+    
+    this.moneyToast(transcation_money);
+
+    if(Math.random()>0.8) {
+      let points = Math.floor(Math.random() * 50) + 1;
+      this.userData.points = this.userData.points + points;
+      this.pointsToast(points);
+    }
+  }
+
+  async moneyToast(money) {
+    const toast = await this.toastController.create({
+      message: `Se han ingresado ${money} € a tu cartera!`,
+      duration: 5000,
+      position: 'top',
+      showCloseButton: true
+    });
+    toast.present();
+  }
+
+  async pointsToast(points) {
+    const toast = await this.toastController.create({
+      message: `Enhorabuena! Has conseguido ${points} puntos.`,
+      duration: 5000,
+      position: 'top',
+      showCloseButton: true
+    });
+    toast.present();
   }
 }
