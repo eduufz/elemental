@@ -13,7 +13,6 @@ import { environment } from '../environments/environment';
 import { AuthService } from './auth.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { VideoPlayer } from '@ionic-native/video-player/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,7 +29,6 @@ import { VideoPlayer } from '@ionic-native/video-player/ngx';
   providers: [
     StatusBar,
     SplashScreen,
-    VideoPlayer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AuthService
   ],

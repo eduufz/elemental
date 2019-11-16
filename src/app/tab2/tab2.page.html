@@ -1,9 +1,41 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>tab2</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z0 striped animated slideInDown fast">
 
-</ion-content>
+	<!-- Position Column -->
+	<ng-container matColumnDef="position">
+		<th mat-header-cell *matHeaderCellDef mat-sort-header> </th>
+		<td mat-cell *matCellDef="let element"> {{element.position}} </td>
+	</ng-container>
+
+	<!-- Symbol Column -->
+	<ng-container matColumnDef="symbol">
+		<th mat-header-cell *matHeaderCellDef mat-sort-header  class="ion-text-uppercase"> <strong>Insignia</strong>  </th>
+		<td mat-cell *matCellDef="let element"> 
+			<ion-thumbnail slot="end">
+				<img src="../../assets/icon/ranks/rank{{element.symbol}}.svg ">
+			</ion-thumbnail>
+
+		</td>
+	</ng-container>
+
+	<!-- Name Column -->
+	<ng-container matColumnDef="name">
+		<th mat-header-cell *matHeaderCellDef mat-sort-header  class="ion-text-uppercase"> <strong>Usuario</strong>  </th>
+		<td mat-cell *matCellDef="let element" color="light"><strong> {{element.name}} </strong> </td>
+	</ng-container>
+
+	<!-- points Column -->
+	<ng-container matColumnDef="amount">
+		<th mat-header-cell *matHeaderCellDef mat-sort-header  class="ion-text-uppercase"><strong class="ion-float-right">Cantidad Donado</strong>  </th>
+		<td mat-cell *matCellDef="let element" style="text-align: right;"> 
+			{{element.amount}} €
+		</td>
+	</ng-container>
+
+
+
+
+	<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+	<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
