@@ -1,4 +1,4 @@
-<ion-header class="{{display}}">
+<ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -10,18 +10,46 @@
 </ion-header>
 
 <ion-content>
-  <video width='100%' class="{{displayVideo}}" (ended)="removeAd()" (click)="removeAd()" (loadeddata)='video($event)'>
+  <video id="ad" width='100%' class="{{displayVideo}}" (ended)="removeAd()" (click)="removeAd()" (loadeddata)='video($event)'>
     <source src="../assets/videos/ad.mp4" type="video/mp4">
   </video>
 
-  <div class="top-banner {{display}}">
+  <div class="top-banner">
     <div class="inner-banner"></div>
     <div class="badge-banner">
         <img class="rank-img" [src]="userData.rank.image">
     </div>
   </div>
 
-  <ion-button class="ion-activatable custom-size  {{display}} {{color}}" expand="block" size="undefined"  (click)="presentLoading()" color="danger" strong style="font-size: 25px;">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle style='font-size: 20px;'>
+        Cartera
+        <ion-icon name='cash' style='float:right; font-size: 30px;'></ion-icon>
+      </ion-card-subtitle>
+      <ion-card-title>
+        <ion-text color='danger' style='font-size: 35px;'>
+          {{userData.wallet.toFixed(2)}} €
+        </ion-text>
+        <ion-text style='font-size: 35px; color:lightgray;'>
+          / {{transactionThreshold.toFixed(2)}} €
+        </ion-text>
+      </ion-card-title>
+      <ion-progress-bar color="primary" value="{{userData.wallet/transactionThreshold}}"></ion-progress-bar>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle style='font-size: 20px;'>
+        Puntos
+        <ion-icon name='disc' style='float:right; font-size: 30px;'></ion-icon>
+      </ion-card-subtitle>
+      <ion-card-title color='danger' style='font-size: 35px;'>{{userData.points.toFixed()}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-button class="ion-activatable custom-size pulse" expand="block" size="undefined"  (click)="presentLoading()" color="danger" strong style="font-size: 25px;">
       <ion-icon name="arrow-dropright-circle" ></ion-icon>
 			  VER ANUNCIO
 			<ion-ripple-effect type="unbounded"></ion-ripple-effect>
